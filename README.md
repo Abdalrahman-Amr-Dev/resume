@@ -69,7 +69,7 @@ git push origin main --tags
 
 Computer Science & AI Engineering student at **Damietta University**, focused on backend engineering, cloud infrastructure, distributed systems, and AI integration.
 
-* 💼 Lead Software Engineer
+* 💼 Software Engineer
 * ⚙️ Node.js / NestJS / TypeScript
 * ☁️ AWS / Cloudflare / Hetzner
 * 🐳 Docker & CI/CD
