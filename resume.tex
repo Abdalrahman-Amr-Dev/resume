@@ -1,0 +1,256 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \textbf{Abdalrahman Amr}} \\ \vspace{1pt}
+    Damietta, Egypt \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +20 115 827 7509 ~ \href{mailto:abdalrahman.amr.dev@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{abdalrahman.amr.dev@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/abdalrhman-amr-55842b334/}{\raisebox{-0.2\height}\faLinkedin\ \underline{LinkedIn}}  ~
+    \href{https://github.com/Abdalrahman-Amr-Dev}{\raisebox{-0.2\height}\faGithub\ \underline{GitHub}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Damietta University}{2023 -- 2027 (Expected)}
+      {Bachelor of Science in Computer Science (AI Engineering)}{Damietta, Egypt}
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Honors \& Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Top 8 Finisher}: ICPC ECPC 2024 Collegiate Programming Contest
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    \begin{multicols}{4}
+        \begin{itemize}[itemsep=-5pt, parsep=3pt]
+            \item\small Data Structures
+            \item Algorithms Analysis
+            \item AI Engineering
+            \item Database Management
+            \item System Architecture
+            \item Web Security
+            \item Cloud Computing
+            \item Software Design
+        \end{itemize}
+    \end{multicols}
+    \vspace*{2.0\multicolsep}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+   \resumeSubheading
+      {Baianat}{March 2026 -- Present}
+      {Lead Software Engineer}{Damietta, Egypt}
+      \resumeItemListStart
+        \resumeItem{Assumed full technical ownership of ERP and CRM projects, overseeing the end-to-end lifecycle from architecture to cloud deployment.}
+        \resumeItem{Designed and maintained high-availability VPS clusters (AWS/Hetzner), ensuring 99.9\% uptime for client-critical infrastructure.}
+        \resumeItem{Developed and standardized core Node.js/TypeScript boilerplates, reducing project initialization time and ensuring consistent code quality across the team.}
+        \resumeItem{Directed technical workflows for a small team, conducting code reviews and implementing security best practices to bridge the gap in senior-level oversight.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Baianat}{May 2025 -- March 2026}
+      {Backend \& Infrastructure Engineer}{Damietta, Egypt}
+      \resumeItemListStart
+        \resumeItem{Developed and scaled high-performance Node.js backends, leading system design, database schema optimization, and secure third-party API integrations.}
+        \resumeItem{Managed and provisioned cloud infrastructure across AWS (EC2) and Hetzner, ensuring high availability and cost-effective resource allocation.}
+        \resumeItem{Architected and automated CI/CD pipelines for seamless deployment workflows, achieving zero-downtime rollouts for staging and production environments.}
+        \resumeItem{Modernized legacy backend services by migrating to Serverless architectures (AWS Lambda, Cloudflare Workers), reducing latency and operational costs.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Space.Baianat.com} $|$ \emph{Node.js, AI Integration, WebSockets, SSE}}{2025 -- 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered a platform integrating ERP, CRM, and Attendance systems with complex business logic and cross-service consistency.}
+            \resumeItem{Implemented an AI assistant using modern LLM integrations and SSE for automated internal reporting and task management.}
+            \resumeItem{Developed a high-concurrency real-time chat engine using WebSockets for organization-wide persistent collaboration.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+          
+\resumeProjectHeading
+          {\textbf{Tatmeen.sa} $|$ \emph{Node.js, Cloudflare Workers, CI/CD, AWS (S3/CloudFront)}}{2026}
+          \resumeItemListStart
+            \resumeItem{Maintained production backend, resolving critical bottlenecks in \textbf{payment gateway} integrations and \textbf{contract signing services} to ensure seamless business operations.}
+            \resumeItem{Re-engineered asset management systems, migrating to a scalable AWS S3/CloudFront pipeline with on-the-fly resizing, reducing bandwidth by 60\%.}
+            \resumeItem{Developed edge logic using \textbf{Cloudflare Workers} and established a robust \textbf{CI/CD setup} to automate deployments and improve system reliability.}
+            \resumeItem{Performed ongoing maintenance and bug fixes, optimizing backend performance and ensuring the stability of high-traffic user workflows.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+          
+\resumeProjectHeading
+          {\textbf{Ajmal.app Modernization} $|$ \emph{NestJS, Bull, Redis}}{2026}
+          \resumeItemListStart
+            \resumeItem{Architected a real-time "Nudge" notification engine for a high-traffic e-commerce platform using an event-driven approach.}
+            \resumeItem{Decoupled behavioral triggers from the main thread using Redis and BullMQ to ensure zero latency impact on production traffic.}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+
+\resumeProjectHeading
+          {\textbf{Workens.com} $|$ \emph{AWS (Lambda@Edge, S3, CloudFront), Node.js, Serverless}}{2026}
+          \resumeItemListStart
+            \resumeItem{Engineered a secure media delivery system using \textbf{Lambda@Edge} to intercept CDN requests and validate user authentication before serving private assets.}
+            \resumeItem{Migrated frontend infrastructure from traditional VPS hosting to a fully Serverless architecture, optimizing cost and scalability.}
+            \resumeItem{Implemented on-the-fly image processing and caching strategies to ensure low-latency delivery of high-resolution media.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+      \resumeProjectHeading
+          {\textbf{Caterk.app} $|$ \emph{Node.js, PostgreSQL, AWS (S3, CloudFront)}}{2026}
+          \resumeItemListStart
+            \resumeItem{Led migration from traditional hosting to a Serverless architecture, significantly reducing operational overhead.}
+            \resumeItem{Optimized database queries and backend logic to handle increased user traffic during peak service hours.}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript (ES6+), TypeScript, Python, SQL} \\
+     \textbf{Cloud \& DevOps}{: AWS (EC2, S3, Lambda), Hetzner Cloud, Cloudflare Workers, Docker, CI/CD Pipelines, Serverless} \\
+     \textbf{Frameworks/Databases}{: Node.js, NestJS, Express, MongoDB, PostgreSQL, Redis, WebSockets, BullMQ} \\
+     \textbf{Specialized}{: VPS Management, AI Integration, Web Security, GraphQL, SSE} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Technical Contributions}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Core Backend Boilerplate}{2025 -- Present}{Lead Architect}{Baianat}
+            \resumeItemListStart
+                \resumeItem{Collaborated on the design and development of a modular NestJS boilerplate, implementing shared JWT authentication, advanced logging, and robust security middleware.}
+                \resumeItem{Coordinated with the engineering team to standardize deployment patterns across internal projects, enabling faster rollouts and uniform system reliability.}
+                \resumeItem{Contributed to the engineering of a scalable RTC engine, partnering with front-end and infrastructure teams to support high-concurrency chat and WebRTC signaling.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
