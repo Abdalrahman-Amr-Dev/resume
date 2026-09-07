@@ -71,7 +71,7 @@ Computer Science & AI Engineering student at **Damietta University**, focused on
 
 * 💼 Software Engineer
 * ⚙️ Node.js / NestJS / TypeScript
-* ☁️ AWS / Cloudflare / Hetzner
+* ☁️ AWS / Cloudflare
 * 🐳 Docker & CI/CD
 * 🤖 AI & LLM Integration
 
