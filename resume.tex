@@ -209,11 +209,14 @@
           \vspace{-13pt}
 
       \resumeProjectHeading
-          {\href{https://workens.com}{\textbf{Workens.com}} $|$ \emph{AWS (Lambda@Edge, S3, CloudFront), Node.js, Serverless}}{2026}
+          {\href{https://workens.com}{\textbf{Workens.com}} $|$ \emph{AWS (Lambda@Edge, S3, CloudFront), Node.js, Serverless, PostgreSQL, RDS, Grafana k6}}{2026}
           \resumeItemListStart
             \resumeItem{Engineered a secure media delivery system using \textbf{Lambda@Edge} to intercept CDN requests and validate user authorization before serving private assets.}
             \resumeItem{Migrated frontend infrastructure from traditional VPS hosting to a fully Serverless architecture, optimizing cost and scalability.}
             \resumeItem{Implemented on-the-fly image processing and caching strategies to ensure low-latency delivery of high-resolution media.}
+            \resumeItem{Migrated the application backend to \textbf{Amazon RDS with PostgreSQL}, replacing the previous database setup with a managed production-ready service.}
+            \resumeItem{Tuned PostgreSQL configuration for the RDS instance hardware, aligning settings with \textbf{SSD storage} and the exact available CPU cores to maximize throughput and responsiveness.}
+            \resumeItem{Built automated \textbf{Grafana k6} load, stress, and spike testing flows to validate performance under realistic traffic patterns and catch regressions early.}
           \resumeItemListEnd
           \vspace{-13pt}
 
