@@ -38,7 +38,7 @@ Backend and cloud engineer building and maintaining production applications with
 \textbf{Cloud \& Infrastructure:} AWS (EC2, S3, CloudFront, Lambda, Lambda@Edge, RDS), Cloudflare Workers, Cloudflare Access, Docker, Hetzner Cloud, VPS administration\\
 \textbf{Delivery \& Quality:} Git, Bitbucket Pipelines, GitHub Actions, CI/CD, Wrangler, Grafana k6, load testing, code review\\
 \textbf{Security \& Integrations:} JWT, JWKS validation, payment gateways, LLM integration\\
-\textbf{Frontend:} React, Astro, Tailwind CSS
+\textbf{Frontend:} React, Next.js, Astro, Tailwind CSS
 
 \section{Professional Experience}
 \role{Software Engineer}{Mar 2026 -- Present}{Baianat}{Damietta, Egypt}
@@ -79,11 +79,14 @@ Backend and cloud engineer building and maintaining production applications with
 \item Deployed the Mindmore marketing website on Cloudflare Workers and configured CI/CD pipelines to automate website deployments.
 \end{itemize}
 
-\project{Space --- ERP, CRM \& Collaboration Platform}{https://space.baianat.com}{Node.js, LLM Integration, WebSockets, Server-Sent Events | 2025 -- 2026}
+\project{Baianat Space --- Business \& Collaboration Platform}{https://space.baianat.com}{NestJS, TypeScript, GraphQL, Next.js, PostgreSQL, Redis, AWS, Go | 2025 -- 2026}
 \begin{itemize}
-\item Developed integrated ERP, CRM, and attendance workflows with shared business logic and cross-service data consistency.
-\item Implemented an LLM-powered assistant for internal reporting and task management, using SSE to stream responses.
-\item Built persistent real-time chat using WebSockets for collaboration across the organization.
+\item Developed backend services and frontend features for an integrated business platform spanning CRM, project management, attendance, and team collaboration.
+\item Built an AI assistant with OpenAI and Gemini integrations, streaming responses, and conversation history management.
+\item Developed real-time chat features with direct and group messaging, file attachments, and push notifications for team collaboration.
+\item Designed a direct-to-S3 file upload workflow with automated validation using a Go-based AWS Lambda deployed from an Amazon ECR container image, plus real-time upload status updates through Redis and SSE.
+\item Implemented configurable role-based access control with global, team, and ownership scopes and permission-aware interfaces; added activity tracking and background notifications across business workflows.
+\item Automated CI/CD pipelines, security checks, and database migration workflows for staging and production delivery.
 \end{itemize}
 
 \project{Tatmeen}{https://tatmeen.sa}{Node.js, Cloudflare Workers, AWS S3, CloudFront, CI/CD | 2026}
