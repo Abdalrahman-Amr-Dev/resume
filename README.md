@@ -78,7 +78,7 @@ Computer Science & AI Engineering student at **Damietta University**, focused on
 ## 🔗 Links
 
 * [GitHub](https://github.com/Abdalrahman-Amr-Dev)
-* [LinkedIn](https://www.linkedin.com/in/abdalrahman-amr-55842b334/)
+* [LinkedIn](https://www.linkedin.com/in/abdalrhman-amr-55842b334/)
 
 ---
 
