@@ -1,24 +1,27 @@
-% Resume source. Compile with pdfLaTeX.
+% Compile with pdfLaTeX or Tectonic. Single-column, selectable text and live links.
 \documentclass[a4paper,10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[margin=0.65in]{geometry}
+\usepackage[margin=0.62in]{geometry}
 \usepackage[english]{babel}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
+\ifdefined\pdfgentounicode
 \input{glyphtounicode}
 \pdfgentounicode=1
+\fi
+\hypersetup{pdftitle={Abdalrahman Amr - Backend and Cloud Engineer},pdfauthor={Abdalrahman Amr}}
 \pagestyle{empty}
 \urlstyle{same}
 \raggedright
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{2pt}
 \setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=3pt,parsep=0pt}
-\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
-\titlespacing*{\section}{0pt}{10pt}{5pt}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
 \newcommand{\role}[4]{\textbf{#1}\hfill #2\par\textit{#3 | #4}\par}
-\newcommand{\project}[3]{\textbf{\href{#2}{#1}}\par\textit{#3}\par}
+\newcommand{\project}[3]{\textbf{\href{#2}{#1}}\hfill #3\par}
 
 \begin{document}
 \begin{center}
@@ -29,105 +32,94 @@ Damietta, Egypt | +20 115 827 7509 | \href{mailto:abdalrahman.amr.dev@gmail.com}
 \end{center}
 
 \section{Professional Summary}
-Backend and cloud engineer building and maintaining production applications with TypeScript, Node.js, NestJS, AWS, and Cloudflare. Experience in API design, PostgreSQL, serverless infrastructure, CI/CD automation, and real-time systems. Develops ERP and CRM platforms and modernizes application infrastructure, with a focus on security, reliability, and performance.
+Backend-focused software engineer building and operating production systems with Node.js, NestJS, TypeScript, and PostgreSQL. Designs reliable asynchronous workflows, payment integrations, and real-time services, with hands-on AWS and Cloudflare infrastructure experience. Leads backend design and delivery, guides code reviews, and investigates production reliability, database performance, and cloud security.
 
 \section{Technical Skills}
-\textbf{Languages:} TypeScript, JavaScript (ES6+), SQL, Python\\
-\textbf{Backend:} Node.js, NestJS, Express, Hono, GraphQL, WebSockets, Server-Sent Events (SSE), BullMQ\\
-\textbf{Databases \& Caching:} PostgreSQL, MongoDB, Redis, Redis Pub/Sub, TypeORM, database migrations\\
-\textbf{Cloud \& Infrastructure:} AWS (EC2, S3, CloudFront, Lambda, Lambda@Edge, RDS, ECR), Cloudflare Workers, Cloudflare Access, Docker, Hetzner Cloud, VPS administration\\
-\textbf{Delivery \& Testing:} Git, Bitbucket Pipelines, GitHub Actions, CI/CD, Wrangler, unit testing, Grafana k6, load testing, code review\\
-\textbf{Security \& Architecture:} JWT, JWKS validation, role-based access control (RBAC), scoped permissions, event-driven architecture, transactional outbox, webhooks\\
-\textbf{Integrations:} OpenAI, Gemini, Stripe, Agora, Stream Chat, Sumsub\\
-\textbf{Frontend:} React, Next.js, Astro, Tailwind CSS
+\textbf{Languages \& Frameworks:} TypeScript, JavaScript, SQL, Python; Node.js, NestJS, Express, Hono\\
+\textbf{Backend \& APIs:} REST, GraphQL, Apollo Server, DataLoader, WebSockets, Server-Sent Events (SSE)\\
+\textbf{Databases \& Caching:} PostgreSQL, TypeORM, MongoDB, Mongoose, Redis; migrations, indexing, transactions\\
+\textbf{Distributed Systems:} Transactional outbox, BullMQ, Redis Pub/Sub, idempotency, webhook deduplication, PostgreSQL advisory locks; AWS SQS evaluation\\
+\textbf{Cloud \& Infrastructure:} AWS (EC2, RDS, S3, CloudFront, Lambda, Lambda@Edge, ECR, IAM, CloudTrail); Cloudflare Workers, WAF, Access; Docker, Linux, Nginx, PM2, TLS\\
+\textbf{Observability \& Delivery:} Grafana, Loki, pgbench, k6; Git, Bitbucket Pipelines, GitHub Actions, CI/CD, unit testing, code review\\
+\textbf{Integrations:} Stripe, Agora RTC, Stream Chat, Firebase Cloud Messaging, Sumsub, OpenAI, Gemini\\
+\textbf{Frontend:} Next.js, React, Astro
 
 \section{Professional Experience}
 \role{Software Engineer}{Mar 2026 -- Present}{Baianat}{Damietta, Egypt}
 \begin{itemize}
-\item Lead technical design and delivery of ERP and CRM systems, including architecture decisions, backend development, and production deployment.
-\item Standardize reusable Node.js and TypeScript foundations and engineering patterns across client projects.
-\item Guide a small engineering team through code reviews, architectural decisions, and security-focused development practices.
-\item Design infrastructure and deployment strategies to support production availability and service reliability.
+\item Lead technical design and delivery of ERP and CRM systems, translating business workflows into backend modules, data models, and production deployment plans.
+\item Establish reusable Node.js and TypeScript foundations and engineering patterns across client projects; guide architecture decisions and code reviews.
+\item Coordinate technical tasks and deployments, help developers resolve complex backend issues, and promote maintainable, security-focused implementations.
 \end{itemize}
 
 \role{Backend \& Cloud Infrastructure Engineer}{May 2025 -- Mar 2026}{Baianat}{Damietta, Egypt}
 \begin{itemize}
-\item Developed backend APIs, database architectures, and third-party integrations for production applications, including payment and contract-signing workflows.
-\item Automated staging and production CI/CD pipelines and implemented deployment workflows designed to minimize service interruption.
-\item Modernized legacy infrastructure using AWS and Cloudflare serverless services to support scaling and simplify operations.
-\item Implemented monitoring, security controls, and infrastructure automation to improve production maintenance and reliability.
+\item Developed production APIs, database schemas, and third-party integrations for business platforms, including payment and contract-signing workflows.
+\item Automated staging and production delivery with CI/CD pipelines and database migration workflows; implemented monitoring and security controls for production operations.
+\item Modernized VPS-based infrastructure with AWS and Cloudflare serverless services, integrating application deployment, environment configuration, and secure content delivery.
 \end{itemize}
 
 \section{Selected Projects}
-\project{Workens}{https://workens.com}{AWS Lambda@Edge, S3, CloudFront, RDS, PostgreSQL, Node.js, Grafana k6 | 2026}
+\project{Mindmore --- Consultation Platform}{https://mindmore.co.uk/}{2026}
 \begin{itemize}
-\item Built private media delivery with Lambda@Edge authorization checks, on-demand image processing, and CDN caching.
-\item Migrated frontend hosting from VPS infrastructure to serverless delivery and moved the application database to Amazon RDS for PostgreSQL; tuned database settings for instance compute and storage resources.
-\item Created automated load, stress, and spike tests with Grafana k6 to evaluate application performance under varying traffic patterns.
-\item Configured Bitbucket Pipelines and branch restrictions to require linting, type checks, unit tests, security scans, and builds before merges; integrated automated pull request reviews.
+\item Implemented scheduled, instant, and group consultations with participant and availability checks; organized the NestJS/GraphQL consultation domain into five feature modules.
+\item Integrated Stripe payments, tax calculation, currency conversion, and webhooks to synchronize payment state; added Sumsub identity verification and event-driven provider onboarding.
+\item Built provider-independent Stream Chat and Agora RTC gateways using ports and adapters, signed webhook validation, and consultation call states for participant joins, termination, and rejoining.
+\item Strengthened transactional outbox processing with webhook deduplication, processing leases, and failure handling; moved external API calls outside database transactions.
+\item Added integration unit tests and CI checks; automated marketing website deployments on Cloudflare Workers.
 \end{itemize}
 
 \newpage
-\textbf{\href{https://mindmore.co.uk/}{Mindmore --- Consultation Platform}}\hfill 2026\par
-\textit{NestJS, TypeScript, GraphQL, PostgreSQL, Redis, BullMQ, Stripe, Agora, Stream Chat}\par
+\project{Workens --- Business Platform}{https://workens.com}{2026}
 \begin{itemize}
-\item Implemented scheduled, instant, and group consultation booking workflows with participant validation and provider availability checks; refactored the consultation domain into five feature modules.
-\item Built provider search with specialty-match ranking, language and budget filters, and multi-currency pricing conversion.
-\item Integrated Stripe payments, tax calculation, foreign exchange quotes, and payment webhooks; implemented Sumsub identity verification and event-driven provider onboarding updates.
-\item Built provider-independent chat and RTC gateways using ports and adapters for Stream Chat and Agora, including signed webhook validation and consultation call lifecycle handling.
-\item Strengthened transactional outbox processing with webhook deduplication, processing leases, and failure handling; moved external API calls outside database transactions.
-\item Added unit tests for payment, identity verification, chat, and RTC integrations; automated CI checks for linting, types, tests, and dependency security.
-\item Deployed the Mindmore marketing website on Cloudflare Workers and configured CI/CD pipelines to automate website deployments.
+\item Built private media delivery using S3, Lambda@Edge authorization, on-demand image processing, and CloudFront caching.
+\item Migrated frontend hosting from VPS infrastructure to serverless delivery and the database to Amazon RDS for PostgreSQL; tuned database configuration for available compute and storage.
+\item Benchmarked PostgreSQL with pgbench at 10--200 concurrent clients and load-tested application endpoints with k6 at 50 and 200 virtual users to investigate throughput, latency, and bottlenecks.
+\item Configured Bitbucket Pipelines and merge requirements for linting, type checks, unit tests, security scans, builds, and automated pull request reviews.
 \end{itemize}
 
-\project{Baianat Space --- Business \& Collaboration Platform}{https://space.baianat.com}{NestJS, TypeScript, GraphQL, Next.js, PostgreSQL, Redis, AWS, Go | 2025 -- 2026}
+\project{Baianat Space --- Business \& Collaboration Platform}{https://space.baianat.com}{2025 -- 2026}
 \begin{itemize}
-\item Developed backend services and frontend features for an integrated business platform spanning CRM, project management, attendance, and team collaboration.
-\item Built an AI assistant with OpenAI and Gemini integrations, streaming responses, and conversation history management.
-\item Developed real-time chat features with direct and group messaging, file attachments, and push notifications for team collaboration.
-\item Designed a direct-to-S3 file upload workflow with automated validation using a Go-based AWS Lambda deployed from an Amazon ECR container image, plus real-time upload status updates through Redis and SSE.
-\item Implemented configurable role-based access control with global, team, and ownership scopes and permission-aware interfaces; added activity tracking and background notifications across business workflows.
-\item Automated CI/CD pipelines, security checks, and database migration workflows for staging and production delivery.
+\item Developed NestJS/GraphQL backend services and frontend features for CRM, project management, attendance, and collaboration; implemented configurable global, team, and ownership-scoped access controls.
+\item Designed direct-to-S3 uploads with file type and size validation in a Go-based AWS Lambda deployed from ECR; coordinated real-time upload status updates through Redis and SSE.
+\item Built direct and group chat with attachments and push notifications, plus an OpenAI/Gemini assistant with streamed responses and conversation history.
+\item Automated staging and production CI/CD, security checks, and database migrations; added activity tracking and background notifications for business workflows.
 \end{itemize}
 
-\project{Tatmeen}{https://tatmeen.sa}{Node.js, Cloudflare Workers, AWS S3, CloudFront, CI/CD | 2026}
+\project{Tatmeen}{https://tatmeen.sa}{2026}
 \begin{itemize}
-\item Resolved production issues in payment gateway and contract-signing integrations to support core business workflows.
-\item Reworked asset delivery using S3, CloudFront, and on-demand image resizing to reduce bandwidth consumption.
-\item Implemented Cloudflare Workers edge logic and automated deployment workflows; maintained backend performance and production stability.
+\item Resolved production payment gateway and contract-signing issues; implemented S3/CloudFront asset delivery, on-demand image resizing, Cloudflare Workers edge logic, and automated deployments.
 \end{itemize}
 
-\project{Ajmal --- Event-Driven Notifications}{https://ajmal.app}{NestJS, BullMQ, Redis | 2026}
+\project{Ajmal --- Event-Driven Notifications}{https://ajmal.app}{2026}
 \begin{itemize}
-\item Designed a real-time notification engine for an e-commerce platform using event-driven processing.
-\item Moved behavioral notification triggers into Redis-backed BullMQ jobs to keep processing off the synchronous request path.
+\item Designed an e-commerce notification engine and moved behavioral triggers into Redis-backed BullMQ jobs, separating notification processing from synchronous requests.
 \end{itemize}
 
-\project{Cloudflare Hono Waitlist Template}{https://github.com/Abdalrahman-Amr-Dev/cloudflare-hono-waitlist-template}{Astro, React, Hono, Cloudflare Workers, Cloudflare Access, JWT | 2026}
+\project{Cloudflare Hono Waitlist Template}{https://github.com/Abdalrahman-Amr-Dev/cloudflare-hono-waitlist-template}{2026}
 \begin{itemize}
-\item Built a serverless full-stack template with an Astro frontend, reusable React components, and a Hono API deployed on Cloudflare Workers.
-\item Implemented API health checks and JWT middleware with Cloudflare Access JWKS validation; configured staging and production deployments with Wrangler.
+\item Built an Astro/React frontend and Hono API on Cloudflare Workers with health checks, Cloudflare Access JWT/JWKS validation, and Wrangler staging and production deployments.
+\end{itemize}
+
+\section{Production Engineering}
+\begin{itemize}
+\item Used PostgreSQL transactions and advisory locks to coordinate concurrent operations and protect state transitions.
+\item Contributed to AWS security incident remediation: revoked compromised credentials, reviewed IAM permissions and CloudTrail activity, and strengthened access controls through MFA and IAM roles where appropriate.
+\item Investigated backend errors and resource bottlenecks using Grafana, Loki, request timing, and database/Redis monitoring; configured Nginx and SSE endpoints for long-lived connections.
 \end{itemize}
 
 \section{Open Source Contributions}
-\textbf{NestJS Documentation --- MikroORM v7 Compatibility}\hfill 2026\\
-\href{https://github.com/nestjs/docs.nestjs.com/pull/3497}{github.com/nestjs/docs.nestjs.com/pull/3497}
-\begin{itemize}
-\item Submitted documentation updates with explicit imports and migration guidance for decorators, entity managers, repositories, and MikroOrmModule.
-\end{itemize}
-\textbf{NestJS Swagger --- Dependency Security Report}\hfill 2026\\
-\href{https://github.com/nestjs/swagger/issues/4038}{github.com/nestjs/swagger/issues/4038}
-\begin{itemize}
-\item Reported a transitive js-yaml vulnerability affecting @nestjs/swagger, documenting reproduction steps, the affected dependency tree, and a proposed remediation path.
-\end{itemize}
+\textbf{\href{https://github.com/nestjs/docs.nestjs.com/pull/3497}{NestJS Documentation --- MikroORM v7 Compatibility}}\hfill 2026\\
+Submitted documentation updates covering explicit imports and migration guidance for decorators, entity managers, repositories, and MikroOrmModule.\\[3pt]
+\textbf{\href{https://github.com/nestjs/swagger/issues/4038}{NestJS Swagger --- Dependency Security Report}}\hfill 2026\\
+Reported a transitive js-yaml vulnerability with reproduction steps, the affected dependency tree, and a proposed remediation path.
 
 \section{Education}
 \textbf{Damietta University}\hfill 2023 -- Expected 2027\\
 Bachelor of Science in Computer Science (AI Engineering) | Damietta, Egypt\\
-\textbf{Relevant Coursework:} Data Structures, Algorithm Analysis, Database Management, System Architecture, Web Security, Cloud Computing
+\textbf{Coursework:} Data Structures, Algorithm Analysis, Database Management, System Architecture, Web Security, Cloud Computing
 
 \section{Honors \& Awards}
 \textbf{8th Place --- ICPC ECPC Qualifications, Day 3}\hfill Jul 2024\\
 Represented Damietta University in the 2024 ICPC ECPC Qualifications Collegiate Programming Contest.
-
 \end{document}
