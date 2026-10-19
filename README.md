@@ -1,85 +1,57 @@
 # Abdalrahman Amr — Resume
 
-My professional resume, written in **LaTeX** and automatically compiled to PDF using **GitHub Actions**.
+Backend & Cloud Engineer building production systems with Node.js, NestJS, TypeScript, PostgreSQL, AWS, and Cloudflare. Experience spans backend architecture, reliable asynchronous processing, payment integrations, real-time services, and production operations.
 
-## 📄 Resume
+This repository maintains my resume in LaTeX, with automated PDF builds and versioned releases.
 
-**Latest version:** [Download Resume (PDF)](../../releases/latest)
+**[Download the latest resume (PDF)](https://github.com/Abdalrahman-Amr-Dev/resume/releases/latest/download/resume.pdf)** · [View source](resume.tex) · [Release history](https://github.com/Abdalrahman-Amr-Dev/resume/releases)
 
-The PDF is automatically generated whenever changes are pushed to the `main` branch.
+## Document
 
-## 🛠️ Tech Stack
+The resume uses a two-page, single-column layout with selectable text, standard section headings, and clickable contact and project links. The source of truth is [`resume.tex`](resume.tex).
 
-* **LaTeX** — Resume source and document formatting
-* **Git** — Version control
-* **GitHub Actions** — Automated PDF generation
-* **GitHub Releases** — Versioned resume PDFs
+## Build locally
 
-## 📁 Project Structure
+Use either a LaTeX distribution with pdfLaTeX or [Tectonic](https://tectonic-typesetting.github.io/).
 
-```text
-.
-├── resume.tex
-├── README.md
-├── .gitignore
-└── .github/
-    └── workflows/
-        └── build-resume.yml
-```
-
-## 🔄 Workflow
-
-The resume follows a simple automated workflow:
-
-```text
-Edit resume.tex
-      ↓
-Commit & Push
-      ↓
-GitHub Actions
-      ↓
-Compile LaTeX
-      ↓
-Generate resume.pdf
-      ↓
-Publish as Release
-```
-
-## 📌 Versioning
-
-Resume versions follow [Semantic Versioning](https://semver.org/):
-
-* **Patch** (`v1.0.1`) — Typo fixes, formatting changes, minor corrections
-* **Minor** (`v1.1.0`) — New projects, skills, experience, or achievements
-* **Major** (`v2.0.0`) — Major redesigns or significant career changes
-
-Example:
+With pdfLaTeX:
 
 ```bash
-git add resume.tex
-git commit -m "feat: add new project"
-
-git tag v1.1.0
-git push origin main --tags
+mkdir -p build
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build resume.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=build resume.tex
 ```
 
-## 👤 About Me
+Or with Tectonic:
 
-**Abdalrahman Amr**
+```bash
+mkdir -p build
+tectonic --outdir build resume.tex
+```
 
-Computer Science & AI Engineering student at **Damietta University**, focused on backend engineering, cloud infrastructure, distributed systems, and AI integration.
+Both methods produce `build/resume.pdf`. Review the generated PDF for page breaks, spacing, and link behavior before publishing.
 
-* 💼 Software Engineer
-* ⚙️ Node.js / NestJS / TypeScript
-* ☁️ AWS / Cloudflare
-* 🐳 Docker & CI/CD
-* 🤖 AI & LLM Integration
+## Automated builds and releases
 
-## 🔗 Links
+The [GitHub Actions workflow](.github/workflows/build-resume.yml) runs on pushes to `main` and tags beginning with `v`.
 
-* [GitHub](https://github.com/Abdalrahman-Amr-Dev)
-* [LinkedIn](https://www.linkedin.com/in/abdalrhman-amr-55842b334/)
+- **Push to `main`:** Compiles the resume and uploads the PDF as the `resume-pdf` workflow artifact.
+- **Push a version tag:** Also publishes a GitHub release containing `resume.pdf` and generated release notes.
 
----
+The download link above points to the latest published release. Changes pushed only to `main` are available through workflow artifacts until a new version is tagged.
 
-> This repository contains the source code of my resume. The PDF is generated automatically from the LaTeX source.
+## Versioning
+
+Versions use the `vMAJOR.MINOR.PATCH` format:
+
+- **Patch:** Wording corrections, formatting adjustments, and small factual updates.
+- **Minor:** New experience, projects, skills, or achievements.
+- **Major:** Substantial changes to the document's structure or professional positioning.
+
+Create an annotated tag on the intended commit and push that specific tag to publish a release. Existing release tags should remain unchanged.
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/abdalrhman-amr-55842b334/)
+- [GitHub](https://github.com/Abdalrahman-Amr-Dev)
+- [Email](mailto:abdalrahman.amr.dev@gmail.com)
