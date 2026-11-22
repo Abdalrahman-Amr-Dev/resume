@@ -83,7 +83,10 @@ Backend-focused software engineer building and operating production systems with
 \begin{itemize}
 \item Developed NestJS/GraphQL backend services and frontend features for CRM, project management, attendance, and collaboration; implemented configurable global, team, and ownership-scoped access controls.
 \item Designed direct-to-S3 uploads with file type and size validation in a Go-based AWS Lambda deployed from ECR; coordinated real-time upload status updates through Redis and SSE.
-\item Built direct and group chat with attachments and push notifications, plus an OpenAI/Gemini assistant with streamed responses and conversation history.
+\item Built direct and group chat with attachments and push notifications, and developed tooling to migrate Stream Chat users and channel memberships to account-level IDs.
+\item Modeled job postings and applications and built private applicant chats with GraphQL access checks, automatic participant updates, attachment controls, and notifications.
+\item Built a shared NestJS Model Context Protocol (MCP) server for Codex with OAuth 2.0, PKCE, Redis-backed token rotation, and refresh-token replay protection.
+\item Exposed 42 Zod-validated MCP tools for projects, teams, tasks, subtasks, sprints, and contributions, reusing GraphQL resolvers and existing access controls.
 \item Automated staging and production CI/CD, security checks, and database migrations; added activity tracking and background notifications for business workflows.
 \end{itemize}
 
